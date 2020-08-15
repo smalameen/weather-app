@@ -1,3 +1,5 @@
+
+               // Event Listener to search Button
 function gettingDateByClick(){
     const getData = document.getElementById("search-button");
     const getDataOne = getData.value;
@@ -7,8 +9,7 @@ function gettingDateByClick(){
     
 }
 
-
-
+                            // Fetch and display Data
 function getDataFromFetch(){
     const areInput = document.getElementById("input-from-user");
     const inputValue = areInput.value;
@@ -17,7 +18,7 @@ fetch (`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&units=me
     .then (weather => displayData(weather))
     
 
-    function displayData(weather){
+function displayData(weather){
         
         const nameValue = document.getElementById("myCity");
         nameValue.innerText = `${weather.name}`;
@@ -29,6 +30,7 @@ fetch (`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&units=me
         getDescription.innerHTML = weather.weather[0].main;
     }       
 }
+
 
 
 
