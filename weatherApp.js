@@ -28,6 +28,11 @@ function displayData(weather){
 
         const getDescription = document.getElementById("description");
         getDescription.innerHTML = weather.weather[0].main;
+
+        const getTheIcon = weather.weather[0].icon;
+        const theUrl = "https://openweathermap.org/img/wn/"+ getTheIcon + ".png";
+        document.getElementById("image-change").src = theUrl;
+        
     }       
 }
 
